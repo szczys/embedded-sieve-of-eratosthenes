@@ -1,14 +1,16 @@
 /****************
-Demo code which can be included in open source packages, more details:
-https://github.com/szczys/tiva-c-launchpad-template
+Embedded Sieve of Eratosthenes
+https://github.com/szczys/embedded-sieve-of-eratosthenes
 
-This is a placeholder example
-included with a gcc tiva C template
+Find prime numbers by eliminating multiples from a list.
 
-It illuminates each color of the
-Tiva C Launchpad board LED in order,
-pausing about 1 second on each
-color.
+The list is an array of 32-bit registers. Each bit
+represents a number, with the index of the bit being the
+number itself.
+
+The arry is stored in SRAM, allowing the use of the
+ARM core Bit-Banding functionality to modify bits
+without a read, modify, write activity.
 ****************/
 
 #include <stdint.h>
